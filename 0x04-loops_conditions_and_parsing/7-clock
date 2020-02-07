@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This script displays numbers from 1 to 20 and Superstitious numbers
+i=1
+j=1
+echo "Hour: 0"
+while ((i <= 12))
+do
+	while ((j < 60))
+	do
+		echo $j
+		((j++))
+	done
+	echo "Hour: " $i
+	((j = 1))
+	((i++))
+done
