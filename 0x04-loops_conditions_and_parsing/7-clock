@@ -3,14 +3,14 @@
 i=1
 j=1
 echo "Hour: 0"
-while ((i <= 12))
+while ((i <= 13))
 do
 	while ((j < 60))
 	do
 		echo $j
 		((j++))
 	done
-	if ((i != 12))
+	if ((i != 13))
 	then
 		echo "Hour: " $i
 	fi
