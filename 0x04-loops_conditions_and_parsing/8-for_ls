@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script is display The content of the current directory
-
-for file in *[-]*
+FILES=$(ls)
+for file in $FILES
 do
 	echo "${file#*-}"
-done 
+done
