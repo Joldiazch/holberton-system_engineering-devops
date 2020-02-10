@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#script that displays To infinity and beyond indefinitely
+id=$(pgrep -f '7-highlander')
+kill -9 "$id"
