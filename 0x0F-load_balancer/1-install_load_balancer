@@ -2,7 +2,7 @@
 sudo apt-get update
 sudo apt-get install haproxy -y
 sudo chmod 777 /etc/haproxy/
-sed -i '$ a frontend firstbalance \n\tbind *:80 \n\tdefault_backend webservers' /etc/haproxy/haproxy.cfg
-sed -i '$ a backend webservers \n\tbalance roundrobin \n\tserver 1166-web-01 104.196.117.221:80 check \n\tserver 1166-web-02 54.221.125.45:80 check\n' /etc/haproxy/haproxy.cfg
+sed -i "$ a frontend firstbalance \n\tbind *:80 \n\tdefault_backend webservers" /etc/haproxy/haproxy.cfg
+sed -i "$ a backend webservers \n\tbalance roundrobin \n\tserver 1166-web-01 104.196.117.221:80 check \n\tserver 1166-web-02 54.221.125.45:80 check\n" /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
 
