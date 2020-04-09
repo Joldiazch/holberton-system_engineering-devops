@@ -8,14 +8,14 @@ print_msg()
 
 SUBS="www lb-01 web-01 web-02"
 DOT="."
-if [ "$2" ]
+if [ $# -eq 2 ]
 	then
 		URL=$2$DOT$1
 		IP="$(dig "$URL" +short)"
 		RECORD="$(dig "$URL" | grep -A1 'ANSWER SECTION:' | grep "$URL" | cut -f4)"
 		print_msg "$IP" "$2" "$RECORD"
 else
-	if [ "$1" ]
+	if [ $# -eq 1 ]
 		then
 			for sub in $SUBS; do
 				URL=$sub$DOT$1
