@@ -12,7 +12,7 @@ if [ "$2" ]
 	then
 		URL=$2$DOT$1
 		IP="$(dig "$URL" +short)"
-		RECORD="$(dig "$URL" | grep '^'"$URL" | cut -f4)"
+		RECORD="$(dig "$URL" | grep -A1 'ANSWER SECTION:' | grep '^'"$URL" | cut -f4)"
 		print_msg "$IP" "$2" "$RECORD"
 else
 	if [ "$1" ]
