@@ -40,17 +40,15 @@ frontend firstbalance
         bind *:80 
         bind *:443 ssl crt /etc/ssl/www.likelot.tech/www.likelot.tech.pem
         redirect scheme https code 301 if !{ ssl_fc }
-        mode http
         acl letsencrypt-acl path_beg /.well-known/acme-challenge/
         use_backend letsencrypt-backend if letsencrypt-acl
-
+        mode http
         default_backend webservers
-
-backend letsencrypt-backend
-        server letsencrypt 127.0.0.1:8888
-
 backend webservers 
         balance roundrobin 
         mode http 
         server 1166-web-01 104.196.117.221:80 check 
         server 1166-web-02 54.221.125.45:80 check
+backend letsencrypt-backend
+        server letsencrypt 127.0.0.1:8888
+
