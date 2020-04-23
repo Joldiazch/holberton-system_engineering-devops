@@ -3,4 +3,3 @@
 mysqldump -u root -p "$1" --all-databases > backup.sql
 d=$(date +%d-%m-%Y)
 tar -cvzf "$d".tar.gz backup.sql
-
