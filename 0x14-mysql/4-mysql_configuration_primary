@@ -25,7 +25,7 @@ nice            = 0
 # * Basic Settings
 #
 user            = mysql
-pid-file        = /var/run/mysqld/mysqld.pid 
+pid-file        = /var/run/mysqld/mysqld.pid
 socket          = /var/run/mysqld/mysqld.sock
 port            = 3306
 basedir         = /usr
@@ -102,4 +102,3 @@ server-id = 1
 log_bin = /var/log/mysql/mysql-bin.log
 binlog_do_db = tyrell_corp
 relay_log = /var/log/mysql/mysql-relay-bin
-relay_log_index = /var/log/mysql/mysql-relay-bin.index

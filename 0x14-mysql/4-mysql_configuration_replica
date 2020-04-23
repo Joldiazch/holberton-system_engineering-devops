@@ -2,8 +2,8 @@
 # The MySQL database server configuration file.
 #
 # You can copy this to one of:
-# - "/etc/mysql/my.cnf" to set global options,
-# - "~/.my.cnf" to set user-specific options.
+# - "/etc/mysql/my.cnf" to set global options, 
+# - "~/.my.cnf" to set user-specific options.  
 #
 # One can use all long options that the program supports.
 # Run program with --help to get a list of available options and with      
@@ -106,4 +106,3 @@ server-id = 2
 log_bin = /var/log/mysql/mysql-bin.log
 binlog_do_db = tyrell_corp
 relay_log = /var/log/mysql/mysql-relay-bin
-relay_log_index = /var/log/mysql/mysql-relay-bin.index
