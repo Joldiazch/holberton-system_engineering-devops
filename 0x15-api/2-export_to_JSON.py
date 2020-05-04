@@ -4,9 +4,10 @@ script that, using REST API,
 for a given employee ID, returns information
 about his/her todo list progress
 """
+import json
 import requests
 from sys import argv
-import json
+
 
 if __name__ == "__main__":
     id = argv[1]
