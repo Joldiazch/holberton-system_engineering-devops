@@ -13,11 +13,9 @@ def number_of_subscribers(subreddit):
 
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
     headers = {'user-agent': 'X-Modhash'}
-    response = requests.get(url, headers=headers)
+    response = requests.get(url, headers=headers, allow_redirects=False)
     all_data = response.json()
     data = all_data.get('data')
     if data:
-        subscribers = data.get('subscribers')
-        if subscribers:
-            return subscribers
+        return data.get('subscribers')
     return 0
