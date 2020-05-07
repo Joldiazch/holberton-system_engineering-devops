@@ -24,4 +24,5 @@ def top_ten(subreddit):
         hot_post = data.get('children')
         titles = [post.get('data').get('title') for post in hot_post]
         print("\n".join(titles))
-    print(None)
+    else:
+        print(None)
